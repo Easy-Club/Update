@@ -6,10 +6,14 @@ using System.Net.Http;
 using System.Web.Http;
 using BL;
 using DTO;
+using System.Web.Http.Cors;
 namespace UI.Controllers
+
 {
     public class UsersController : ApiController
     {
+        [EnableCors(origins: "http://localhost:3000", headers: "*", methods: "*")]
+
         /// <summary>
         /// 
         /// </summary>

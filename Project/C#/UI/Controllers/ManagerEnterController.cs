@@ -7,10 +7,13 @@ using System.Web.Http;
 using DAL;
 using BL;
 using DTO;
+using System.Web.Http.Cors;
+
 namespace UI.Controllers
 {
     public class ManagerEnterController : ApiController
     {
+        [EnableCors(origins: "http://localhost:3000", headers: "*", methods: "*")]
         [HttpPost]
         public IHttpActionResult PostSingIn(EnterprisesDTO enterprises)
         {

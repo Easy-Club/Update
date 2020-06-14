@@ -4,6 +4,9 @@ import 'semantic-ui-css/semantic.min.css';
 import { NavLink} from 'react-router-dom';
 class Login extends Component {
   render() {
+    error=(event)=>{
+      if()
+    }
     return (
       <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
       <Grid.Column style={{ maxWidth: 450 }}>
@@ -14,12 +17,15 @@ class Login extends Component {
           <Segment stacked>
             <Form.Input 
             fluid icon='user' 
-            iconPosition='left' placeholder='E-mail address'required 
+            iconPosition='left'
+             placeholder='E-mail address'
+             required 
             type='email'
-            error={{
-              content: 'Please enter a valid email address',
-              pointing: 'below',
-            }}/>
+            // error={{
+            //   content: 'Please enter a valid email address',
+            //   pointing: 'below',
+            // }}
+            />
             <Form.Input
               fluid
               icon='lock'
@@ -27,9 +33,10 @@ class Login extends Component {
               placeholder='Password'
               type='password'
               required
+              
               // className={!value.valid?'error':null}
-            />
-            <Button color='teal' fluid size='large'>
+            />            
+            <Button color='teal' fluid size='large'onClick={()=> error(event)}>
               Login
             </Button>
           </Segment>
